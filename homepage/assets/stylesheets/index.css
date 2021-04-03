@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --google-navbar-height: 80px;
+  --google-app-height: 50px;
+  --google-app-width: 50px;
+  --google-dark-gray-color: #444;
+  --google-light-gray-color: #eee;
+}
+
+.google-navbar {
+  padding: 10px;
+  height: var(--google-navbar-height);
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.google-link {
+  order: 3;
+  margin-right: 12px;
+  color: var(--google-dark-gray-color);
+  text-decoration: none;
+}
+
+.google-link:hover {
+  text-decoration: underline;
+}
+
+.google-selector {
+  order: 2;
+  margin: 0 2px;
+  text-align: center;
+  height: var(--google-app-height);
+  width: var(--google-app-width);
+}
+
+.google-selector:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--google-light-gray-color);
+}
+
+.google-selector > path {
+  transform: scale(1.1) translate(10px, 10px);
+  filter: invert(29%) sepia(0%) saturate(996%) hue-rotate(147deg)
+    brightness(99%) contrast(79%);
+}
+
+.google-profile {
+  order: 1;
+  margin: 0 2px;
+  height: var(--google-app-height);
+  width: var(--google-app-width);
+}
+
+.google-profile:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--google-light-gray-color);
+}
+
+.google-profile > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transform: translate(5px, 5px);
+}

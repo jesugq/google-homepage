@@ -3,12 +3,23 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  height: var(--google-html-height);
+}
+
 :root {
+  --google-html-height: 100vh;
   --google-navbar-height: 80px;
   --google-app-height: 50px;
   --google-app-width: 50px;
-  --google-dark-gray-color: #444;
-  --google-light-gray-color: #eee;
+  --google-four-gray-color: #444;
+  --google-something-gray-color: #bbb;
+  --google-thirteen-gray-color: #ddd;
+  --google-fourteen-gray-color: #eee;
+  --google-main-height: 75vh;
+  --google-logo-height: 100px;
+  --google-logo-width: 300px;
+  --google-searchbox-width: 90vw;
 }
 
 .google-navbar {
@@ -22,7 +33,7 @@
 .google-link {
   order: 3;
   margin-right: 12px;
-  color: var(--google-dark-gray-color);
+  color: var(--google-four-gray-color);
   text-decoration: none;
 }
 
@@ -33,7 +44,6 @@
 .google-selector {
   order: 2;
   margin: 0 2px;
-  text-align: center;
   height: var(--google-app-height);
   width: var(--google-app-width);
 }
@@ -41,7 +51,7 @@
 .google-selector:hover {
   cursor: pointer;
   border-radius: 50%;
-  background-color: var(--google-light-gray-color);
+  background-color: var(--google-fourteen-gray-color);
 }
 
 .google-selector > path {
@@ -60,7 +70,7 @@
 .google-profile:hover {
   cursor: pointer;
   border-radius: 50%;
-  background-color: var(--google-light-gray-color);
+  background-color: var(--google-fourteen-gray-color);
 }
 
 .google-profile > img {
@@ -68,4 +78,69 @@
   width: 40px;
   border-radius: 50%;
   transform: translate(5px, 5px);
+}
+
+.google-main {
+  display: flex;
+  height: var(--google-main-height);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.google-logo > img {
+  height: var(--google-logo-height);
+  width: var(--google-logo-width);
+}
+
+.google-searchbox {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--google-searchbox-width);
+  border-radius: 25px;
+  border: solid 1px var(--google-thirteen-gray-color);
+}
+
+.google-searchbox:hover {
+  box-shadow: 0 1px 6px var(--google-something-gray-color);
+}
+
+.google-magnifier {
+  height: var(--google-app-height);
+  width: var(--google-app-width);
+}
+
+.google-magnifier > path {
+  transform: translate(12px, 12px);
+  filter: invert(29%) sepia(0%) saturate(996%) hue-rotate(147deg)
+    brightness(200%) contrast(79%);
+}
+
+.google-input {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.google-microphone {
+  height: var(--google-app-height);
+  width: var(--google-app-width);
+}
+
+.google-microphone > path {
+  transform: scale(1.1) translate(10px, 10px);
+}
+
+.google-buttons {
+  display: none;
+}
+
+.google-information {
+  display: none;
+}
+
+footer {
+  display: none;
 }

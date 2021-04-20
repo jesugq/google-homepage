@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 html {
@@ -12,14 +13,16 @@ html {
   --google-navbar-height: 80px;
   --google-app-height: 50px;
   --google-app-width: 50px;
-  --google-four-gray-color: #444;
-  --google-something-gray-color: #bbb;
-  --google-thirteen-gray-color: #ddd;
-  --google-fourteen-gray-color: #eee;
+  --google-4-gray-color: #444;
+  --google-8-gray-color: #888;
+  --google-b-gray-color: #bbb;
+  --google-d-gray-color: #ddd;
+  --google-e-gray-color: #eee;
+  --google-f8-gray-color: #f8f8f8;
   --google-main-height: 75vh;
   --google-logo-height: 100px;
   --google-logo-width: 300px;
-  --google-searchbox-width: 90vw;
+  --google-searchbox-width: 600px;
 }
 
 .google-navbar {
@@ -33,7 +36,7 @@ html {
 .google-link {
   order: 3;
   margin-right: 12px;
-  color: var(--google-four-gray-color);
+  color: var(--google-4-gray-color);
   text-decoration: none;
 }
 
@@ -51,7 +54,7 @@ html {
 .google-selector:hover {
   cursor: pointer;
   border-radius: 50%;
-  background-color: var(--google-fourteen-gray-color);
+  background-color: var(--google-e-gray-color);
 }
 
 .google-selector > path {
@@ -70,7 +73,7 @@ html {
 .google-profile:hover {
   cursor: pointer;
   border-radius: 50%;
-  background-color: var(--google-fourteen-gray-color);
+  background-color: var(--google-e-gray-color);
 }
 
 .google-profile > img {
@@ -88,23 +91,22 @@ html {
   flex-direction: column;
 }
 
-.google-logo > img {
-  height: var(--google-logo-height);
-  width: var(--google-logo-width);
+.google-logo {
+  margin: 10px 0;
 }
 
 .google-searchbox {
-  margin: 10px;
+  margin: 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: var(--google-searchbox-width);
   border-radius: 25px;
-  border: solid 1px var(--google-thirteen-gray-color);
+  border: solid 1px var(--google-d-gray-color);
 }
 
 .google-searchbox:hover {
-  box-shadow: 0 1px 6px var(--google-something-gray-color);
+  box-shadow: 0 1px 6px var(--google-b-gray-color);
 }
 
 .google-magnifier {
@@ -119,9 +121,10 @@ html {
 }
 
 .google-input {
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
   border: none;
+  outline: none;
 }
 
 .google-microphone {
@@ -134,13 +137,26 @@ html {
 }
 
 .google-buttons {
-  display: none;
+  margin: 20px 0;
 }
 
-.google-information {
-  display: none;
+.google-search,
+.google-lucky {
+  margin: 0 5px;
+  padding: 0.75em;
+  border: none;
+  color: var(--google-4-gray-color);
+  border-radius: 4px;
+  border: 1px solid white;
+  background-color: var(--google-f8-gray-color);
 }
 
-footer {
+.google-search:hover,
+.google-lucky:hover {
+  border: 1px solid var(--google-d-gray-color);
+  box-shadow: 0 0.3px 0.3px var(--google-b-gray-color);
+}
+
+.google-footer {
   display: none;
 }

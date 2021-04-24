@@ -19,13 +19,15 @@ html {
   --google-d-gray-color: #ddd;
   --google-e-gray-color: #eee;
   --google-f8-gray-color: #f8f8f8;
-  --google-main-height: 75vh;
   --google-logo-height: 100px;
   --google-logo-width: 300px;
   --google-searchbox-width: 600px;
 }
 
 .google-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding: 10px;
   height: var(--google-navbar-height);
   display: flex;
@@ -85,7 +87,7 @@ html {
 
 .google-main {
   display: flex;
-  height: var(--google-main-height);
+  height: 85vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -101,6 +103,7 @@ html {
   align-items: center;
   justify-content: space-between;
   width: var(--google-searchbox-width);
+  height: 44px;
   border-radius: 25px;
   border: solid 1px var(--google-d-gray-color);
 }
@@ -121,7 +124,7 @@ html {
 }
 
 .google-input {
-  height: 90%;
+  height: 100%;
   width: 90%;
   border: none;
   outline: none;
@@ -130,6 +133,10 @@ html {
 .google-microphone {
   height: var(--google-app-height);
   width: var(--google-app-width);
+}
+
+.google-microphone:hover {
+  cursor: pointer;
 }
 
 .google-microphone > path {
@@ -158,6 +165,9 @@ html {
 }
 
 .google-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   color: var(--google-8-gray-color);
   background-color: var(--google-e-gray-color);
 }
